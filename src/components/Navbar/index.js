@@ -52,19 +52,15 @@ return (
 		</IconContext.Provider>
 
 		<NavMenu> 
-        
-		<NavLink to='/Calendar' activeStyle>
-			Calendar
-        </NavLink>
 		<NavLink to='/Lessons' activeStyle>
 			Lesson Plans
         </NavLink>
 		<NavLink to='/curriculum' activeStyle>
 			Curriculum
         </NavLink>
-		<NavLink to='/login' activeStyle>
+{/*		<NavLink to='/login' activeStyle>
 			Log in
-		</NavLink>
+			</NavLink>*/}
 		<img src={Logo} className='Logo' alt="logo"/>
 		</NavMenu>
 
