@@ -8,9 +8,9 @@ import Curriculum from './screens/curriculum';
 import Login from './screens/login'
 import Settings from './screens/settings';
 import People from './screens/people';
-import Logout from './screens/log_out';
+//import Logout from './screens/log_out';
 import PrivateRoute from './screens/privateroute'
-import { Container } from 'react-bootstrap'
+//import { Container } from 'react-bootstrap'
 import { AuthProvider } from "./context/auth_context"
 
 function App() {
@@ -24,7 +24,7 @@ return (
 				<Route path='/curriculum' component={Curriculum} />
 				<Route path='/settings' component={Settings} />
 				<Route path='/people' component={People} />
-				<Route path='/log_out' component={Logout} />
+				<Route path='/log_out' component={Home} />
 				<Route path='/login' component={Login} />
 			</Switch>
 		</AuthProvider>
