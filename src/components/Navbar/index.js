@@ -52,10 +52,6 @@ return (
 		</IconContext.Provider>
 
 		<NavMenu> 
-        
-		<NavLink to='/Calendar' activeStyle>
-			Calendar
-        </NavLink>
 		<NavLink to='/Lessons' activeStyle>
 			Lesson Plans
         </NavLink>

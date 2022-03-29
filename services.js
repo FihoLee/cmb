@@ -6,16 +6,16 @@ export function configureAmplify() {
   Amplify.configure(
   {
    Auth: {
-     identityPoolId: 'us-east-2:c3dd0838-ad1b-4337-af6f-cf48f4f1a7a4',
-     region: 'us-east-2',
-     userPoolId: 'us-east-2_bAPQO8XG4',
-     userPoolWebClientId: '6k290d3ip91l10m904658idjn1',
+     identityPoolId: process.env.REACT_APP_identityPoolId,
+     region: process.env.REACT_APP_region,
+     userPoolId: process.env.REACT_APP_userPoolId,
+     userPoolWebClientId: process.env.REACT_APP_userPoolWebClientId,
     },
     Storage: {
       AWSS3: { 
-        bucket: 'www.teachertoolbox.net',
-        region: 'us-east-2',
-        identityPoolId: 'us-east-2:c3dd0838-ad1b-4337-af6f-cf48f4f1a7a4'
+        bucket: process.env.REACT_APP_bucket,
+        region: process.env.REACT_APP_region0,
+        identityPoolId: process.env.REACT_APP_identityPoolId
     }
   }
 });
@@ -24,7 +24,7 @@ export function SetS3Config(bucket, level){
   Storage.configure({ 
          bucket: bucket,
          level: level,
-         region: 'us-east-2',  
+         region: process.env.REACT_APP_region,  
          identityPoolId: process.env.REACT_APP_identityPoolId 
       });
 }

@@ -1,12 +1,5 @@
 node_modules
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-node_modules
->>>>>>> Stashed changes
-=======
-node_modules
->>>>>>> Stashed changes
+.env
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
