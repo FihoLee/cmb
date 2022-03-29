@@ -1,17 +1,22 @@
+/*
 import React, { useEffect, useState } from 'react';
 //import { Viewer } from '@react-pdf-viewer/core'; 
 //import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 //import '@react-pdf-viewer/core/lib/styles/index.css';
 //import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 //import { Worker } from '@react-pdf-viewer/core';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import { storage } from './firebase';
+*/
+import React, { Component } from "react";
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
 import { configureAmplify } from './services';
 import Storage from "@aws-amplify/storage";
 
 Amplify.configure(awsExports);
+
+const Curriculum = () => {
 
 class App2 extends Component {
   state = {
@@ -20,7 +25,7 @@ class App2 extends Component {
     response: ""
   };
 
-  Curriculum = () => {
+UploadFiles = () => {
     SetS3Config("www.teachertoolbox.net", "protected");
     if(files[0].size<=50*1024){
     Storage.put(`userfiles/${this.upload.files[0].name}`,
@@ -64,7 +69,7 @@ class App2 extends Component {
           Browse
         </button>
 
-        <button onClick={this.Curriculum}> Upload File </button>
+        <button onClick={this.UploadFiles}> Upload File </button>
 
         {!!this.state.response && <div>{this.state.response}</div>}
       </div>
@@ -74,6 +79,7 @@ class App2 extends Component {
 
 configureAmplify();
 const rootElement = document.getElementById("root");
+};
 
 /* 
 const Curriculum = () => {
@@ -191,5 +197,5 @@ const Curriculum = () => {
  ) 
 }
 }*/
- 
-export default Curriculum;
+
+export default Curriculum
