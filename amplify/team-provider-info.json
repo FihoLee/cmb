@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cmbamp-dev-235824-authRole",
+      "UnauthRoleArn": "arn:aws:iam::938312965551:role/amplify-cmbamp-dev-235824-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::938312965551:role/amplify-cmbamp-dev-235824-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
+      "UnauthRoleName": "amplify-cmbamp-dev-235824-unauthRole",
+      "StackName": "amplify-cmbamp-dev-235824",
+      "StackId": "arn:aws:cloudformation:us-east-2:938312965551:stack/amplify-cmbamp-dev-235824/dfc57e90-af1c-11ec-b6fc-06ea13f3e45e",
+      "AmplifyAppId": "d2fjf0jdign476"
+    }
+  }
+}
