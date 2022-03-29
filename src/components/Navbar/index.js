@@ -1,19 +1,19 @@
 import React, {useState} from 'react';
 import Logo from '../ReadySetTeach.jpg';
-import User from '../Profile.jpg';
-import { Link } from 'react-router-dom';
+//import User from '../Profile.jpg';
+//import { Link } from 'react-router-dom';
 import * as BsIcons from "react-icons/bs";
-import * as AiIcons from "react-icons/ai";
+//import * as AiIcons from "react-icons/ai";
 import { SidebarData } from './SidebarData';
 import './Navbar.css';
 import { IconContext } from 'react-icons/lib';
 import {
 Nav,
 NavLink,
-Bars,
+//Bars,
 NavMenu,
-NavBtn,
-NavBtnLink,
+//NavBtn,
+//NavBtnLink,
 } from './NavbarElements';
 
 const Navbar = () => {
@@ -52,15 +52,19 @@ return (
 		</IconContext.Provider>
 
 		<NavMenu> 
+	
 		<NavLink to='/Lessons' activeStyle>
 			Lesson Plans
         </NavLink>
 		<NavLink to='/curriculum' activeStyle>
 			Curriculum
         </NavLink>
-		<NavLink to='/login' activeStyle>
+		<NavLink to='/People' activeStyle>
+			People
+        </NavLink>
+{/*		<NavLink to='/login' activeStyle>
 			Log in
-		</NavLink>
+			</NavLink>*/}
 		<img src={Logo} className='Logo' alt="logo"/>
 		</NavMenu>
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import { FaBars } from 'react-icons/fa';
+/*import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled from 'styled-components';*/
 
 /*const Home = () => {
   return (
@@ -54,7 +54,8 @@ cursor: pointer;
 function Home () {
   return (
     <div className='home'>
-      <h1>Welcome to Ready Set Teach!</h1>
+      <h1 className='text-center mb-4'>Welcome to Ready Set Teach!</h1>
+      <h2 className="text-center mb-4">Logged out</h2>
     </div>
   );
 }
