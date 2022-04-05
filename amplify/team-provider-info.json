@@ -9,7 +9,26 @@
       "UnauthRoleName": "amplify-cmbamp-dev-235824-unauthRole",
       "StackName": "amplify-cmbamp-dev-235824",
       "StackId": "arn:aws:cloudformation:us-east-2:938312965551:stack/amplify-cmbamp-dev-235824/dfc57e90-af1c-11ec-b6fc-06ea13f3e45e",
-      "AmplifyAppId": "d2fjf0jdign476"
+      "AmplifyAppId": "d2fjf0jdign476",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "cmbamp609d810d": {}
+      },
+      "function": {
+        "cmbamp609d810dCustomMessage": {
+          "REDIRECTURL": "www.teachertoolbox.net/redirect",
+          "EMAILSUBJECT": "Your teachertoolbox confirmation",
+          "EMAILMESSAGE": "Thank you for registering with teachertoolbox! Below is your url to confirm your email address: ",
+          "deploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
+          "s3Key": "amplify-builds/cmbamp609d810dCustomMessage-712b58416a3245704e66-build.zip"
+        },
+        "S3Triggerfb8b9bbe": {
+          "deploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
+          "s3Key": "amplify-builds/S3Triggerfb8b9bbe-66495a6d5149504e5476-build.zip"
+        }
+      }
     }
   }
 }

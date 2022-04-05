@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "cmbamp609d810d",
+  "functionName": "cmbamp609d810dCustomMessage",
+  "resourceName": "cmbamp609d810dCustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\Users\\Mollys PC\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "cmbamp609d810dCustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "www.teachertoolbox.net/redirect",
+  "EMAILSUBJECT": "Your teachertoolbox confirmation",
+  "EMAILMESSAGE": "Thank you for registering with teachertoolbox! Below is your url to confirm your email address: ",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}
