@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "cmbamp609d810d_identitypool_609d810d",
-    "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "cmbamp609d810d",
-    "userPoolName": "cmbamp609d810d_userpool_609d810d",
+    "identityPoolName": "expertc18b56a7_identitypool_c18b56a7",
+    "allowUnauthenticatedIdentities": true,
+    "resourceNameTruncated": "expertc18b56a7",
+    "userPoolName": "expertc18b56a7_userpool_c18b56a7",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -20,8 +20,7 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-      "email",
-      "name"
+      "email"
     ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
@@ -32,24 +31,32 @@
     "userpoolClientReadAttributes": [
       "email"
     ],
-    "userpoolClientLambdaRole": "cmbamp609d810d_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "expertc18b56a7_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "609d810d",
-    "resourceName": "cmbamp609d810d",
+    "sharedId": "c18b56a7",
+    "resourceName": "expertc18b56a7",
     "authSelections": "identityPoolAndUserPool",
     "useDefault": "default",
     "usernameAttributes": [
       "email"
     ],
-    "triggers": {
-      "CustomMessage": [
-        "verification-link"
-      ]
-    },
     "userPoolGroupList": [],
     "serviceName": "Cognito",
-    "verificationBucketName": "cmbamp609d810dverificationbucket",
     "usernameCaseSensitive": false,
-    "useEnabledMfas": true
+    "useEnabledMfas": true,
+    "authRoleArn": {
+      "Fn::GetAtt": [
+        "AuthRole",
+        "Arn"
+      ]
+    },
+    "unauthRoleArn": {
+      "Fn::GetAtt": [
+        "UnauthRole",
+        "Arn"
+      ]
+    },
+    "breakCircularDependency": true,
+    "dependsOn": []
   }
 }

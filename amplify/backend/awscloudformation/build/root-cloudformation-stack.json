@@ -152,79 +152,15 @@
         }
       }
     },
-    "AuthTriggerCustomLambdaStack": {
+    "authexpertc18b56a7": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-expert-dev-113324-deployment/amplify-cfn-templates/auth/expertc18b56a7-cloudformation-template.json",
         "Parameters": {
-          "env": "dev",
-          "userpoolId": {
-            "Fn::GetAtt": [
-              "authcmbamp609d810d",
-              "Outputs.UserPoolId"
-            ]
-          },
-          "userpoolArn": {
-            "Fn::GetAtt": [
-              "authcmbamp609d810d",
-              "Outputs.UserPoolArn"
-            ]
-          },
-          "functioncmbamp609d810dCustomMessageArn": {
-            "Fn::GetAtt": [
-              "functioncmbamp609d810dCustomMessage",
-              "Outputs.Arn"
-            ]
-          },
-          "functioncmbamp609d810dCustomMessageName": {
-            "Fn::GetAtt": [
-              "functioncmbamp609d810dCustomMessage",
-              "Outputs.Name"
-            ]
-          }
-        }
-      },
-      "DependsOn": [
-        "authcmbamp609d810d",
-        "functioncmbamp609d810dCustomMessage"
-      ]
-    },
-    "functioncmbamp609d810dCustomMessage": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/function/cmbamp609d810dCustomMessage-cloudformation-template.json",
-        "Parameters": {
-          "modules": "verification-link",
-          "resourceName": "cmbamp609d810dCustomMessage",
-          "REDIRECTURL": "www.teachertoolbox.net/redirect",
-          "EMAILSUBJECT": "Your teachertoolbox confirmation",
-          "EMAILMESSAGE": "Thank you for registering with teachertoolbox! Below is your url to confirm your email address: ",
-          "deploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
-          "s3Key": "amplify-builds/cmbamp609d810dCustomMessage-712b58416a3245704e66-build.zip",
-          "env": "dev"
-        }
-      }
-    },
-    "functionS3Triggerfb8b9bbe": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/function/S3Triggerfb8b9bbe-cloudformation-template.json",
-        "Parameters": {
-          "deploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
-          "s3Key": "amplify-builds/S3Triggerfb8b9bbe-66495a6d5149504e5476-build.zip",
-          "env": "dev"
-        }
-      }
-    },
-    "authcmbamp609d810d": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/auth/cmbamp609d810d-cloudformation-template.json",
-        "Parameters": {
-          "identityPoolName": "cmbamp609d810d_identitypool_609d810d",
-          "allowUnauthenticatedIdentities": false,
-          "resourceNameTruncated": "cmbamp609d810d",
-          "userPoolName": "cmbamp609d810d_userpool_609d810d",
+          "identityPoolName": "expertc18b56a7_identitypool_c18b56a7",
+          "allowUnauthenticatedIdentities": true,
+          "resourceNameTruncated": "expertc18b56a7",
+          "userPoolName": "expertc18b56a7_userpool_c18b56a7",
           "autoVerifiedAttributes": "email",
           "mfaConfiguration": "OFF",
           "mfaTypes": "SMS Text Message",
@@ -235,23 +171,21 @@
           "defaultPasswordPolicy": false,
           "passwordPolicyMinLength": 8,
           "passwordPolicyCharacters": "",
-          "requiredAttributes": "email,name",
+          "requiredAttributes": "email",
           "aliasAttributes": "",
           "userpoolClientGenerateSecret": false,
           "userpoolClientRefreshTokenValidity": 30,
           "userpoolClientWriteAttributes": "email",
           "userpoolClientReadAttributes": "email",
-          "userpoolClientLambdaRole": "cmbamp609d810d_userpoolclient_lambda_role",
+          "userpoolClientLambdaRole": "expertc18b56a7_userpoolclient_lambda_role",
           "userpoolClientSetAttributes": false,
-          "sharedId": "609d810d",
-          "resourceName": "cmbamp609d810d",
+          "sharedId": "c18b56a7",
+          "resourceName": "expertc18b56a7",
           "authSelections": "identityPoolAndUserPool",
           "useDefault": "default",
           "usernameAttributes": "email",
-          "triggers": "{\"CustomMessage\":[\"verification-link\"]}",
           "userPoolGroupList": "",
           "serviceName": "Cognito",
-          "verificationBucketName": "cmbamp609d810dverificationbucket",
           "usernameCaseSensitive": false,
           "useEnabledMfas": true,
           "authRoleArn": {
@@ -267,20 +201,18 @@
             ]
           },
           "breakCircularDependency": true,
-          "dependsOn": "[object Object]",
-          "permissions": "",
-          "authTriggerConnections": "{\"triggerType\":\"CustomMessage\",\"lambdaFunctionName\":\"cmbamp609d810dCustomMessage\"}",
+          "dependsOn": "",
           "env": "dev"
         }
       }
     },
-    "storageamplifysetup": {
+    "storageEstorage": {
       "Type": "AWS::CloudFormation::Stack",
       "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "TemplateURL": "https://s3.amazonaws.com/amplify-expert-dev-113324-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "Parameters": {
-          "bucketName": "ttbstorage",
-          "selectedGuestPermissions": "",
+          "bucketName": "ttbstorage2",
+          "selectedGuestPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
           "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
           "unauthRoleName": {
             "Ref": "UnauthRoleName"
@@ -288,50 +220,21 @@
           "authRoleName": {
             "Ref": "AuthRoleName"
           },
-          "triggerFunction": "S3Triggerfb8b9bbe",
-          "s3PrivatePolicy": "Private_policy_5c2bf3e8",
-          "s3ProtectedPolicy": "Protected_policy_5c2bf3e8",
-          "s3PublicPolicy": "Public_policy_5c2bf3e8",
-          "s3ReadPolicy": "read_policy_5c2bf3e8",
-          "s3UploadsPolicy": "Uploads_policy_5c2bf3e8",
-          "authPolicyName": "s3_amplify_5c2bf3e8",
-          "unauthPolicyName": "s3_amplify_5c2bf3e8",
+          "s3PrivatePolicy": "Private_policy_0e952cec",
+          "s3ProtectedPolicy": "Protected_policy_0e952cec",
+          "s3PublicPolicy": "Public_policy_0e952cec",
+          "s3ReadPolicy": "read_policy_0e952cec",
+          "s3UploadsPolicy": "Uploads_policy_0e952cec",
+          "authPolicyName": "s3_amplify_0e952cec",
+          "unauthPolicyName": "s3_amplify_0e952cec",
           "AuthenticatedAllowList": "ALLOW",
-          "GuestAllowList": "DISALLOW",
+          "GuestAllowList": "ALLOW",
           "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
           "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
           "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
           "s3PermissionsAuthenticatedUploads": "s3:PutObject",
-          "s3PermissionsGuestPublic": "DISALLOW",
-          "s3PermissionsGuestUploads": "DISALLOW",
-          "functionS3Triggerfb8b9bbeName": {
-            "Fn::GetAtt": [
-              "functionS3Triggerfb8b9bbe",
-              "Outputs.Name"
-            ]
-          },
-          "functionS3Triggerfb8b9bbeArn": {
-            "Fn::GetAtt": [
-              "functionS3Triggerfb8b9bbe",
-              "Outputs.Arn"
-            ]
-          },
-          "functionS3Triggerfb8b9bbeLambdaExecutionRole": {
-            "Fn::GetAtt": [
-              "functionS3Triggerfb8b9bbe",
-              "Outputs.LambdaExecutionRole"
-            ]
-          },
-          "env": "dev"
-        }
-      }
-    },
-    "hostingS3AndCloudFront": {
-      "Type": "AWS::CloudFormation::Stack",
-      "Properties": {
-        "TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/hosting/template.json",
-        "Parameters": {
-          "bucketName": "www.teachertoolbox.net",
+          "s3PermissionsGuestPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsGuestUploads": "s3:PutObject",
           "env": "dev"
         }
       }
@@ -340,7 +243,7 @@
       "DependsOn": [
         "AuthRole",
         "UnauthRole",
-        "authcmbamp609d810d"
+        "authexpertc18b56a7"
       ],
       "Type": "AWS::Lambda::Function",
       "Properties": {
@@ -435,7 +338,7 @@
         },
         "idpId": {
           "Fn::GetAtt": [
-            "authcmbamp609d810d",
+            "authexpertc18b56a7",
             "Outputs.IdentityPoolId"
           ]
         },

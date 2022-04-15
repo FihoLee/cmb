@@ -1,0 +1,18 @@
+{
+  "resourceName": "Estorage",
+  "policyUUID": "0e952cec",
+  "bucketName": "ttbstorage2",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

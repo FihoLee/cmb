@@ -3,18 +3,17 @@
 
 const awsmobile = {
     "aws_project_region": "us-east-2",
-    "aws_cognito_identity_pool_id": "us-east-2:66ba629e-6705-40f0-b3a1-c67e56c70106",
+    "aws_cognito_identity_pool_id": "us-east-2:d7c88e84-954b-4e80-82fb-609fd23c906e",
     "aws_cognito_region": "us-east-2",
-    "aws_user_pools_id": "us-east-2_jYM9I9ohK",
-    "aws_user_pools_web_client_id": "606b7bbudq0oocrspm4ad7lcka",
+    "aws_user_pools_id": "us-east-2_t1nwTBNUZ",
+    "aws_user_pools_web_client_id": "1t1p85l680vpc3tbngu7onc4v6",
     "oauth": {},
     "aws_cognito_username_attributes": [
         "EMAIL"
     ],
     "aws_cognito_social_providers": [],
     "aws_cognito_signup_attributes": [
-        "EMAIL",
-        "NAME"
+        "EMAIL"
     ],
     "aws_cognito_mfa_configuration": "OFF",
     "aws_cognito_mfa_types": [
@@ -27,11 +26,8 @@ const awsmobile = {
     "aws_cognito_verification_mechanisms": [
         "EMAIL"
     ],
-    "aws_user_files_s3_bucket": "ttbstorage235824-dev",
-    "aws_user_files_s3_bucket_region": "us-east-2",
-    "aws_content_delivery_bucket": "www.teachertoolbox.net-dev",
-    "aws_content_delivery_bucket_region": "us-east-2",
-    "aws_content_delivery_url": "https://d3bdkq4wu9sxmk.cloudfront.net"
+    "aws_user_files_s3_bucket": "ttbstorage2113324-dev",
+    "aws_user_files_s3_bucket_region": "us-east-2"
 };
 
 
