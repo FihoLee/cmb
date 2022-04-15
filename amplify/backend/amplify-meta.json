@@ -1,0 +1,145 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cmbamp-dev-235824-authRole",
+      "UnauthRoleArn": "arn:aws:iam::938312965551:role/amplify-cmbamp-dev-235824-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::938312965551:role/amplify-cmbamp-dev-235824-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
+      "UnauthRoleName": "amplify-cmbamp-dev-235824-unauthRole",
+      "StackName": "amplify-cmbamp-dev-235824",
+      "StackId": "arn:aws:cloudformation:us-east-2:938312965551:stack/amplify-cmbamp-dev-235824/dfc57e90-af1c-11ec-b6fc-06ea13f3e45e",
+      "AmplifyAppId": "d2fjf0jdign476",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    }
+  },
+  "function": {
+    "cmbamp609d810dCustomMessage": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2022-04-05T01:59:44.781Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-04-05T01:59:44.857Z",
+      "distZipFilename": "cmbamp609d810dCustomMessage-712b58416a3245704e66-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
+        "s3Key": "amplify-builds/cmbamp609d810dCustomMessage-712b58416a3245704e66-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/function/cmbamp609d810dCustomMessage-cloudformation-template.json",
+        "logicalId": "functioncmbamp609d810dCustomMessage"
+      },
+      "lastPushTimeStamp": "2022-04-07T21:05:35.092Z",
+      "output": {
+        "Region": "us-east-2",
+        "Arn": "arn:aws:lambda:us-east-2:938312965551:function:cmbamp609d810dCustomMessage-dev",
+        "Name": "cmbamp609d810dCustomMessage-dev",
+        "LambdaExecutionRole": "cmbamp609d810dCustomMessage-dev"
+      },
+      "lastPushDirHash": "nbS7GuJ+Auk+eDI8S5dZ8SzwZ9c="
+    },
+    "S3Triggerfb8b9bbe": {
+      "service": "Lambda",
+      "providerPlugin": "awscloudformation",
+      "build": true,
+      "lastBuildTimeStamp": "2022-04-05T01:59:44.783Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-04-05T01:59:44.832Z",
+      "distZipFilename": "S3Triggerfb8b9bbe-66495a6d5149504e5476-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-cmbamp-dev-235824-deployment",
+        "s3Key": "amplify-builds/S3Triggerfb8b9bbe-66495a6d5149504e5476-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/function/S3Triggerfb8b9bbe-cloudformation-template.json",
+        "logicalId": "functionS3Triggerfb8b9bbe"
+      },
+      "lastPushTimeStamp": "2022-04-07T21:05:35.094Z",
+      "output": {
+        "Region": "us-east-2",
+        "Arn": "arn:aws:lambda:us-east-2:938312965551:function:S3Triggerfb8b9bbe-dev",
+        "Name": "S3Triggerfb8b9bbe-dev",
+        "LambdaExecutionRole": "S3Triggerfb8b9bbeLambdaRolefb8b9bbe-dev"
+      },
+      "lastPushDirHash": "5PU+MMax0sCWHniMV7ionylG38g="
+    }
+  },
+  "auth": {
+    "cmbamp6b5e6c25": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      }
+    }
+  },
+  "storage": {
+    "amplifysetup": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "S3Triggerfb8b9bbe",
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ]
+        }
+      ],
+      "lastPushTimeStamp": "2022-04-07T21:05:37.509Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageamplifysetup"
+      },
+      "output": {
+        "BucketName": "ttbstorage235824-dev",
+        "Region": "us-east-2"
+      },
+      "lastPushDirHash": "0QWdRv4dEqYvKTdCbz+mIX+rxHI="
+    }
+  },
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-cmbamp-dev-235824-deployment/amplify-cfn-templates/hosting/template.json",
+        "logicalId": "hostingS3AndCloudFront"
+      },
+      "lastPushTimeStamp": "2022-04-07T21:05:35.101Z",
+      "output": {
+        "CloudFrontSecureURL": "https://d3bdkq4wu9sxmk.cloudfront.net",
+        "S3BucketSecureURL": "https://www.teachertoolbox.net-dev.s3.amazonaws.com",
+        "CloudFrontOriginAccessIdentity": "E2QH2AO7SVID3P",
+        "WebsiteURL": "http://www.teachertoolbox.net-dev.s3-website.us-east-2.amazonaws.com",
+        "CloudFrontDistributionID": "E24O465DKY171B",
+        "Region": "us-east-2",
+        "HostingBucketName": "www.teachertoolbox.net-dev",
+        "CloudFrontDomainName": "d3bdkq4wu9sxmk.cloudfront.net"
+      },
+      "lastPushDirHash": "M4NYfx0hpiceYHvRuq57CxCq3OA="
+    }
+  }
+}
