@@ -40,5 +40,5 @@ class Curriculum extends Component {
     );
   }
 }
-//export default withAuthenticator(Curriculum, {includeGreetings: true})
-export default Curriculum;
+export default withAuthenticator(Curriculum, {includeGreetings: true})
+//export default Curriculum;
