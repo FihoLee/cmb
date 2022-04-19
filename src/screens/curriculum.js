@@ -26,7 +26,9 @@ class Curriculum extends Component {
       <><header>
         Curriculum
       </header><div>
-          <input type='file' accept='.pdf, .doc' onChange={this.handleChange} />
+          <input type='file' accept=".pdf,.doc,.docx,application/pdf,application/msword,
+          application/vnd.openxmlformats-officedocument.wordprocessingml.document" 
+          onChange={this.handleChange} />
         </div><button onClick={this.saveFile}>Save File</button></>
     );
   }
